@@ -1,7 +1,7 @@
 import { env } from "./env.js";
-import { pino, type LoggerOptions } from "pino";
+import pino from "pino";
 
-const loggerOptions: LoggerOptions = {
+const loggerOptions = {
     redact: env.isProduction ? ["hostname"] : [],
     level: "info",
     transport: env.isDev
@@ -14,7 +14,7 @@ const loggerOptions: LoggerOptions = {
           }
         : undefined,
     formatters: {
-        level(label) {
+        level(label: string) {
             return {
                 level: label.toUpperCase(),
             };
