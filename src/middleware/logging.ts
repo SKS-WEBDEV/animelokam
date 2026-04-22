@@ -4,6 +4,6 @@ import { log } from "../config/logger.js";
 
 export const logging: MiddlewareHandler = honoLogger(
     (msg: string, ...rest: string[]) => {
-        log.info(msg, ...rest);
+        log.info([msg, ...rest].join(" "));
     }
 );
