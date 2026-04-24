@@ -2,7 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "ES2023",
+    "target": "ES2022",
     "verbatimModuleSyntax": true,
     "allowJs": true,
     "resolveJsonModule": true,
@@ -23,7 +23,8 @@
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "strictFunctionTypes": true,
-    "lib": ["ES2023"]
+    "lib": ["ES2022", "DOM"],
+    "types": ["node"],
   },
   "include": ["./src", "./api"],
   "exclude": ["node_modules"]
